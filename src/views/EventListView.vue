@@ -28,7 +28,7 @@ onMounted(() => {
 </template>
 
 <style>
-.events {
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;

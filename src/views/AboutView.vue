@@ -18,14 +18,6 @@ onMounted(() => {
 })
 </script>
 
-<style>
-.events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
-
 <template>
   <div class="student">
     <h1>Students Info</h1>
@@ -35,12 +27,13 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
+<style scoped>
+ 
   .student {
-    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
-}
+
 </style>

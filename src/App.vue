@@ -16,13 +16,21 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style>
+<style scoped>
 #layout {
   font-family: Avenir,Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 } 
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav{
+  padding: 30px;
+}
 nav a {
   font-weight: bold;
   color: #2c3e50;
