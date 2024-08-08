@@ -23,7 +23,7 @@ const props = defineProps({
 const page = computed (() => props.page)
 onMounted(() => {
   watchEffect(() => {
-    events.value = null
+    
     
     EventService.getEvents(2, page.value)
       .then((response) => {
