@@ -3,6 +3,10 @@ import EventCard from '@/components/EventCard.vue'
 import {type Event } from '@/types'
 import { ref , onMounted, computed, watchEffect } from 'vue'
 import EventService from '@/services/EventService'
+import {useRouter} from 'vue-router'
+
+const router = useRouter()
+
 
 const events = ref<Event[] | null>(null)
 const totalEvents = ref(0)
@@ -20,6 +24,7 @@ const page = computed (() => props.page)
 onMounted(() => {
   watchEffect(() => {
     events.value = null
+    
     EventService.getEvents(2, page.value)
       .then((response) => {
         events.value = response.data
@@ -28,6 +33,10 @@ onMounted(() => {
       .catch((error)=>{
         console.error('There was an error!', error)
       })
+      .catch(() =>{
+        router.push({name:'network-error-view'})
+      })
+      
   })
 })
 </script>
