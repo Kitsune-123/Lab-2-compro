@@ -3,41 +3,43 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div id="layout">
-    <header>
-      <div class="wrapper">
+ <div id="layout">
+  <header>
+    <div class="wrapper">
         <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
+          <RouterLink :to="{ name:'event-list-view' }">Event</RouterLink> |
+          <RouterLink :to="{ name:'about' }">About</RouterLink> |
+          <RouterLink :to="{ name:'student' }">Student</RouterLink> 
+
+
         </nav>
-      </div>
-    </header>
-    <RouterView />
-  </div>
+    </div>
+  </header>
+
+  <RouterView />
+ </div>
 </template>
 
-<style scoped>
-#layout {
-  font-family: Avenir,Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
+<style >
+#layout{
+  font-family: Avenir,Helvetica, Arial, sans-serif;
+  -webkit-font-smooting: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
-} 
-.wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-nav{
+nav  {
   padding: 30px;
+ 
 }
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+ font-weight: bold;
+ color: #2c3e50;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+nav a.router-link-exact-active{
+  color: #42b983
 }
-
+h2{
+  font-size: 20px;
+}
 </style>

@@ -1,40 +1,23 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Event from '@/types/Student'
+import Student from '@/types/Student'
 defineProps<{
-  event: Event
+ student: Student
 }>()
-// const event = ref({
-//   id: 5928101,
-//   category: 'animal welfare',
-//   title: 'Car Adoption Day',
-//   description: 'Find your new feline friend at this event.',
-//   location: 'Meow Town',
-//   date: 'January 28, 2022',
-//   time: '12:00',
-//   petsAllowed: true,
-//   organizer: 'Kat Laydee',
-// });
 </script>
 
-<!-- fix template -->
 <template>
-  <div class="event-class">
-    <div class="event-card">
-      <h2>{{ event.studentId }}</h2>
-      <p>{{ event.name }} {{ event.surname }}</p>
-      <span>GPA: {{ event.gpa }}</span>
+  <div class="student-class">
+    <div class="student-card">
+      <h2>{{ student.title }} {{ student.surname }} </h2>
+      <p>{{ student.gpa }}</p>
     </div>
   </div>
+
 </template>
 
 <style scoped>
-.event-class {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.event-card {
+.student-card {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -42,13 +25,9 @@ defineProps<{
   margin-bottom: 18px;
 }
 
-.event-card:hover {
+.student-card:hover{
   transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-}
-
-.they-want-it {
-  font-size: 0.87em;
-  text-align: right;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2)
 }
 </style>
+

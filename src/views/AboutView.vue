@@ -1,39 +1,15 @@
-<script setup lang="ts">
-import EventCard from '@/components/StudentCard.vue'
-import Event from '@/types/Student'
-import { ref, onMounted } from 'vue'
-import EventService from '@/services/AnotherEventService'
-
-const events = ref<Event[]>(null)
-
-onMounted(() => {
-  EventService.getEvents()
-    .then((response) => {
-      console.log(response.data)
-      events.value = response.data
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-})
-</script>
-
 <template>
-  <div class="student">
-    <h1>Students Info</h1>
-    <!-- new element -->
-    <div class="events"></div>
-    <EventCard v-for="event in events" :key="event.id" :event="event" />
+  <div class="about">
+    <h1>A site for events to better The world.</h1>
   </div>
 </template>
 
-<style scoped>
- 
-  .student {
+<style>
+/* @media (min-width: 1024px) { */
+  .about {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
-
+/* } */
 </style>
