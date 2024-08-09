@@ -30,7 +30,7 @@ defineProps<{
 </template>
 
 <style scoped>
-.event-card {
+/*.event-card {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -38,14 +38,14 @@ defineProps<{
   margin-bottom: 18px;
 }
 
-/*.event-card:hover{
+.event-card:hover{
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2)
-}*/
+}
 
 .event-link {
   text-decoration: none;
   color: #2c3e50;
-}
+}*/
 </style>
 
