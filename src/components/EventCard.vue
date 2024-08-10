@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Event} from '@/type'
+import type { Event } from '@/types'
 import { RouterLink } from 'vue-router';
 
 defineProps<{
